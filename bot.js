@@ -2,7 +2,7 @@
 // |__) /  \  |  |__/ |  |  
 // |__) \__/  |  |  \ |  |  
 
-// This is the main file for the Ethan_Bot_3000 bot.
+// This is the main file for the Ethan_bot_3000 bot.
 
 // Import Botkit's core features
 const { Botkit } = require('botkit');
