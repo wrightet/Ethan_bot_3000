@@ -12,6 +12,12 @@ module.exports = function(controller) {
     controller.hears('Tell me about yourself', 'message,direct_message', async (bot, message) => {
         await bot.reply(message, about)
     })
+    controller.hears(['^goodbye$'], 'message,direct_message', async (bot, message) => {
+        await bot.reply(message, 'Bye! Thanks for chatting!')
+    })
+    controller.hears(['^Hello$'], 'message,direct_message', async (bot, message) => {
+        await bot.reply(message, "Hello! My name is Ethan Bot 3000 and I am Ethan Wright's personal chat bot. Let me know what you would like to know about him and I will do my best to answer.")
+    })
 
     // use a regular expression to match the text of the message
     controller.hears(new RegExp(/^\d+$/), ['message','direct_message'], async function(bot, message) {

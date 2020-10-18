@@ -4,14 +4,12 @@
  */
 
 module.exports = function(controller) {
-  
+    
     controller.hears('sample','message,direct_message', async(bot, message) => {
         await bot.reply(message, 'I heard a sample message.');
     });
 
-    controller.hears('hello', 'message,direct_message', async (bot, message) => {
-        await bot.reply(message, 'Hello!')
-    })
+
     // controller.asks(async(bot,message) => {
     //     await bot.reply(message, 'Ask: tell me about yourself, or say hello')
     // })
