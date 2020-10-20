@@ -152,17 +152,45 @@
     ],
     "interests": [
         {
-            "name": "Wildlife",
+            "name": "Archery",
             "keywords": [
-                "Ferrets",
-                "Unicorns"
+                "Traditional Archery",
+                "Recurve Bow",
+                "Longbow",
+                "Compound Bow"
             ]
-        }
-    ],
-    "references": [
+        },
         {
-            "name": "Jane Doe",
-            "reference": "Reference..."
+            "name": "Surfing",
+            "keywords": [
+                "Longboard"
+            ]
+        },
+        {
+            "name": "Swimming",
+            "keywords": [
+                "Competitive",
+                "Recreational"
+            ]
+        },
+        {
+            "name": "Bouldering",
+            "keywords": [
+                "Gym Climbing"
+            ]
+        },
+        {
+            "name": "Krav Maga",
+            "keywords": [
+                "Isreali Close Combat"
+            ]
+        },
+        {
+            "name": "Reading and Writing",
+            "keywords": [
+                "Fantasy",
+                "Science Fiction"
+            ]
         }
     ]
 }
