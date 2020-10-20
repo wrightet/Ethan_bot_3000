@@ -6,7 +6,7 @@
         "email": "707-685-7417",
         "phone": "(707)685-7417",
         "website": "https://wrightet.github.io/ethan-wright/",
-        "location": {,
+        "location": {
             "postalCode": "CA 94510",
             "city": "Benicia",
             "countryCode": "US",
@@ -27,6 +27,39 @@
             "website": "https://www.gvrd.org/",
             "startDate": "2010-07-01",
             "endDate": "2018-03-30",
+            "summary": "Description...",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "company": "KidSpirit",
+            "position": "Archery and Aquatics Supervisor",
+            "website": "https://kidspirit.oregonstate.edu/",
+            "startDate": "2016-09-20",
+            "endDate": "2017-12-08",
+            "summary": "Description...",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "company": "All Star Swim School",
+            "position": "Swim Instructor",
+            "website": "https://www.gvrd.org/",
+            "startDate": "2018-03-30",
+            "endDate": "2018-10-17",
+            "summary": "Description...",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "company": "CarMax",
+            "position": "Sales Consultant",
+            "website": "https://www.gvrd.org/",
+            "startDate": "2019-02-18",
+            "endDate": "2019-09-07",
             "summary": "Description...",
             "highlights": [
                 "Started the company"
