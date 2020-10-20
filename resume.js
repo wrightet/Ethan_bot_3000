@@ -1,4 +1,4 @@
-{
+export const resume = {
     "basics": {
         "name": "Ethan Wright",
         "label": "Software Engineer",
