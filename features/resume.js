@@ -211,7 +211,9 @@ module.exports = function (controller) {
     controller.hears(['^Hello$'], 'message,direct_message', async (bot, message) => {
         await bot.reply(message, "Hello! My name is Ethan Bot 3000 and I am Ethan Wright's personal chat bot. Let me know what you would like to know about him and I will do my best to answer.")
     })
-
+    controller.hears(['^what is your favorite color$'], 'message,direct_message', async(bot, message) => {
+        await bot.reply(message, "Ethan's favorite color is blue.")
+    })
     controller.hears(['^education$'], 'message,direct_message', async (bot, message) => {
         const response = resume.education;
         await bot.reply(message, JSON.stringify(response));
