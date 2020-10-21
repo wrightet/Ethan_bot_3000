@@ -357,11 +357,14 @@ var Botkit = {
         that.focus();
 
         that.on('connected', function () {
+            let message = { type: 'message', text: "Hello! My name is Ethan Bot 3000 and I am Ethan Wright's personal chat bot. Let me know what you would like to know about him and I will do my best to answer. Currently you can ask me, favorite color, favorite food, education, interests, awards, work, skills, languages, and resume."}
             that.message_window.className = 'connected';
             that.input.disabled = false;
             that.sendEvent({
                 name: 'connected'
             });
+            
+            that.renderMessage(message);
         })
 
         that.on('disconnected', function () {

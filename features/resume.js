@@ -197,6 +197,9 @@ const resume = {
 
 module.exports = function (controller) {
     // use a function to match a condition in the message
+    controller.on('connect', async (bot, message) => {
+        await bot.reply(message, 'Welcome to the channel!');
+    });
     controller.hears('Tell me about yourself', 'message,direct_message', async (bot, message) => {
         let about = "I am a software engineer with skills in Javascript, Ruby, Ruby on Rails, React, Redux, PostgreSQL, MongoDB, HTML, and CSS. \r\n Since I was very young I have loved to make things.This started with little knick knacks I made with my mother and grandma led into metal / wood working, and finally software development. I love all of the things computer programming allows me to do. Whenever I am programming It makes me feel as though I am a wizard just like in the stories I read as a child. \n Personally, I also enjoy archery. I frequent a few outdoor courses around the bay area, that I would compare to golf courses. Different shots, at different angles and distances. Other hobbies of mine include rock climbing, surfing, swimming, and Krav Maga. \n Though I have found my passion I worked in a variety of backgrounds such as parks and recreation, and aquatics. \n It was actually while I worked as a Recreational Technician that I began to think about coding. I was given many odd jobs such as converting VHS to mp4 for training lifeguards, and managing our staff website. I used excel to create budgets to calculate areas of improvement. The more I worked with computers the more I wanted to know and learn. And I have never stopped. ";
         await bot.reply(message, about)
