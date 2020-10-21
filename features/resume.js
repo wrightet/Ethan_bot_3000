@@ -214,6 +214,15 @@ module.exports = function (controller) {
     controller.hears(['^what is your favorite color$'], 'message,direct_message', async(bot, message) => {
         await bot.reply(message, "Ethan's favorite color is blue.")
     })
+    controller.hears(['^favorite color$'], 'message,direct_message', async(bot, message) => {
+        await bot.reply(message, "Ethan's favorite color is blue.")
+    })
+    controller.hears(['^favorite color$'], 'message,direct_message', async(bot, message) => {
+        await bot.reply(message, "Ethan's favorite color is blue.")
+    })
+    controller.hears(['^what is your favorite food$'], 'message,direct_message', async(bot, message) => {
+        await bot.reply(message, "Ethan's favorite food is chocolate chip cookies.")
+    })
     controller.hears(['^education$'], 'message,direct_message', async (bot, message) => {
         const response = resume.education;
         await bot.reply(message, JSON.stringify(response));
