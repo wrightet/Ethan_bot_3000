@@ -217,8 +217,8 @@ module.exports = function (controller) {
     controller.hears(['^favorite color$'], 'message,direct_message', async(bot, message) => {
         await bot.reply(message, "Ethan's favorite color is blue.")
     })
-    controller.hears(['^favorite color$'], 'message,direct_message', async(bot, message) => {
-        await bot.reply(message, "Ethan's favorite color is blue.")
+    controller.hears(['^favorite food$'], 'message,direct_message', async(bot, message) => {
+        await bot.reply(message, "Ethan's favorite food is chocolate chip cookies.")
     })
     controller.hears(['^what is your favorite food$'], 'message,direct_message', async(bot, message) => {
         await bot.reply(message, "Ethan's favorite food is chocolate chip cookies.")
