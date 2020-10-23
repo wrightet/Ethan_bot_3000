@@ -212,6 +212,11 @@ module.exports = function (controller) {
         await bot.reply(message, `Email: ${response.basics.email}`)
         await bot.reply(message, `Phone: ${response.basics.phone}`)
         await bot.reply(message, `Website: ${response.basics.website}`)
+        await bot.reply(message, `Location:`)
+        await bot.reply(message, `${response.basics.location.city}`)
+        await bot.reply(message, `${response.basics.location.postalCode}`)
+        await bot.reply(message, `${response.basics.location.countryCode}`)
+       
         // await bot.reply(message, JSON.stringify(response.basics));
         // await bot.reply(message, JSON.stringify(response.education));
         // await bot.reply(message, JSON.stringify(response.work));
