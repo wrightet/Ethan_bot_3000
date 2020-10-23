@@ -206,14 +206,19 @@ module.exports = function (controller) {
     })
     controller.hears('resume', 'message,direct_message', async (bot, message) => {
         const response = resume;
-
-        await bot.reply(message, JSON.stringify(response.basics));
-        await bot.reply(message, JSON.stringify(response.education));
-        await bot.reply(message, JSON.stringify(response.work));
-        await bot.reply(message, JSON.stringify(response.skills));
-        await bot.reply(message, JSON.stringify(response.languages));
-        await bot.reply(message, JSON.stringify(response.awards));
-        await bot.reply(message, JSON.stringify(response.interests));
+        // basics
+        await bot.reply(message, `Name: ${response.basics.name}`)
+        await bot.reply(message, `Label: ${response.basics.label}`)
+        await bot.reply(message, `Email: ${response.basics.email}`)
+        await bot.reply(message, `Phone: ${response.basics.phone}`)
+        await bot.reply(message, `Website: ${response.basics.website}`)
+        // await bot.reply(message, JSON.stringify(response.basics));
+        // await bot.reply(message, JSON.stringify(response.education));
+        // await bot.reply(message, JSON.stringify(response.work));
+        // await bot.reply(message, JSON.stringify(response.skills));
+        // await bot.reply(message, JSON.stringify(response.languages));
+        // await bot.reply(message, JSON.stringify(response.awards));
+        // await bot.reply(message, JSON.stringify(response.interests));
     })
     controller.hears(['^goodbye$'], 'message,direct_message', async (bot, message) => {
         await bot.reply(message, 'Bye! Thanks for chatting!')
