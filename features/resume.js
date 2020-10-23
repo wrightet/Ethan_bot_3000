@@ -251,6 +251,14 @@ module.exports = function (controller) {
         await bot.reply(message, `Start:${response.work[4].startDate}`);
         await bot.reply(message, `End:${response.work[4].endDate}`);
         await bot.reply(message, `Duties:${response.work[4].highlights.map(el => (el))}`);
+
+        await bot.reply(message, `Education`);
+        await bot.reply(message, `Institution:${response.education[0].institution}`);
+        await bot.reply(message, `Area:${response.education[0].area}`);
+        await bot.reply(message, `Degree:${response.education[0].studyType}`);
+        await bot.reply(message, `Start date:${response.education[0].startDate}`);
+        await bot.reply(message, `End date:${response.education[0].endDate}`);
+        await bot.reply(message, `GPA:${response.education[0].gpa}`);
         // await bot.reply(message, JSON.stringify(response.basics));
         // await bot.reply(message, JSON.stringify(response.education));
         // await bot.reply(message, JSON.stringify(response.work));
