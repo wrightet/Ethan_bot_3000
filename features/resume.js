@@ -267,8 +267,8 @@ module.exports = function (controller) {
         await bot.reply(message, `Summary ${response.awards[0].summary}`);
 
         await bot.reply(message, `Skills`)
-        await bot.reply(message, `Name: ${response.skills[0].name}`)
-        await bot.reply(message, `Name: ${response.skills[0].keywords.map(el => (el + '\n'))}`)
+        // await bot.reply(message, `Name: ${response.skills[0].name}`)
+        await bot.reply(message, `${response.skills[0].keywords.map(el => (el + '\n'))}`)
 
         // await bot.reply(message, JSON.stringify(response.basics));
         // await bot.reply(message, JSON.stringify(response.education));
