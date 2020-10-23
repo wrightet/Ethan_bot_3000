@@ -25,9 +25,9 @@ const resume = {
             "company": "Greater Vallejo Recreation District",
             "position": "Recreation Technician",
             "website": "https://www.gvrd.org/",
-            "startDate": "2010-07-01",
-            "endDate": "2018-03-30",
-            "summary": "Managed Cunningham Pool in Vallejo, CA",
+            "startDate": "07-01-2010",
+            "endDate": "03-30-2018",
+            "summary": "The recreation district of the city of Vallejo. ",
             "highlights": [
                 "Implemented a more efficient [sales/ intake/ retention] system that increased sales by $3000 in 2016.",
                 "Converted VHS and DVD library to MP4 files and uploaded to the staff website, allowing staff to train from home.",
@@ -207,16 +207,50 @@ module.exports = function (controller) {
     controller.hears('resume', 'message,direct_message', async (bot, message) => {
         const response = resume;
         // basics
-        await bot.reply(message, `Name: ${response.basics.name}`)
-        await bot.reply(message, `Label: ${response.basics.label}`)
-        await bot.reply(message, `Email: ${response.basics.email}`)
-        await bot.reply(message, `Phone: ${response.basics.phone}`)
-        await bot.reply(message, `Website: ${response.basics.website}`)
-        await bot.reply(message, `Location:`)
-        await bot.reply(message, `${response.basics.location.city}`)
-        await bot.reply(message, `${response.basics.location.postalCode}`)
-        await bot.reply(message, `${response.basics.location.countryCode}`)
-       
+        await bot.reply(message, `Name: ${response.basics.name}`);
+        await bot.reply(message, `Label: ${response.basics.label}`);
+        await bot.reply(message, `Email: ${response.basics.email}`);
+        await bot.reply(message, `Phone: ${response.basics.phone}`);
+        await bot.reply(message, `Website: ${response.basics.website}`);
+        await bot.reply(message, `Location:`);
+        await bot.reply(message, `${response.basics.location.city}`);
+        await bot.reply(message, `${response.basics.location.postalCode}`);
+        await bot.reply(message, `${response.basics.location.countryCode}`);
+        await bot.reply(message, `Profiles:`);
+        await bot.reply(message, `${response.basics.profiles[0].network}: ${response.basics.profiles[0].url}: `);
+
+        //work
+        await bot.reply(message, `Work`);
+        await bot.reply(message, `Company:${response.work[0].company}`);
+        await bot.reply(message, `Position:${response.work[0].position}`);
+        await bot.reply(message, `Website:${response.work[0].website}`);
+        await bot.reply(message, `Start:${response.work[0].startDate}`);
+        await bot.reply(message, `End:${response.work[0].endDate}`);
+        await bot.reply(message, `Duties:${response.work[0].highlights.map(el => (el))}`);
+        await bot.reply(message, `Company:${response.work[1].company}`);
+        await bot.reply(message, `Position:${response.work[1].position}`);
+        await bot.reply(message, `Website:${response.work[1].website}`);
+        await bot.reply(message, `Start:${response.work[1].startDate}`);
+        await bot.reply(message, `End:${response.work[1].endDate}`);
+        await bot.reply(message, `Duties:${response.work[1].highlights.map(el => (el))}`);
+        await bot.reply(message, `Company:${response.work[2].company}`);
+        await bot.reply(message, `Position:${response.work[2].position}`);
+        await bot.reply(message, `Website:${response.work[2].website}`);
+        await bot.reply(message, `Start:${response.work[2].startDate}`);
+        await bot.reply(message, `End:${response.work[2].endDate}`);
+        await bot.reply(message, `Duties:${response.work[2].highlights.map(el => (el))}`);
+        await bot.reply(message, `Company:${response.work[3].company}`);
+        await bot.reply(message, `Position:${response.work[3].position}`);
+        await bot.reply(message, `Website:${response.work[3].website}`);
+        await bot.reply(message, `Start:${response.work[3].startDate}`);
+        await bot.reply(message, `End:${response.work[3].endDate}`);
+        await bot.reply(message, `Duties:${response.work[3].highlights.map(el => (el))}`);
+        await bot.reply(message, `Company:${response.work[4].company}`);
+        await bot.reply(message, `Position:${response.work[4].position}`);
+        await bot.reply(message, `Website:${response.work[4].website}`);
+        await bot.reply(message, `Start:${response.work[4].startDate}`);
+        await bot.reply(message, `End:${response.work[4].endDate}`);
+        await bot.reply(message, `Duties:${response.work[4].highlights.map(el => (el))}`);
         // await bot.reply(message, JSON.stringify(response.basics));
         // await bot.reply(message, JSON.stringify(response.education));
         // await bot.reply(message, JSON.stringify(response.work));
