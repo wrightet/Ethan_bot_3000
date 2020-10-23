@@ -297,24 +297,61 @@ module.exports = function (controller) {
         await bot.reply(message, "Ethan's favorite food is chocolate chip cookies.")
     })
     controller.hears(['^education$'], 'message,direct_message', async (bot, message) => {
-        const response = resume.education;
-        await bot.reply(message, JSON.stringify(response));
+        const response = resume;
+        await bot.reply(message, `Education`);
+        await bot.reply(message, `Institution:${response.education[0].institution}`);
+        await bot.reply(message, `Area:${response.education[0].area}`);
+        await bot.reply(message, `Degree:${response.education[0].studyType}`);
+        await bot.reply(message, `Start date:${response.education[0].startDate}`);
+        await bot.reply(message, `End date:${response.education[0].endDate}`);
+        await bot.reply(message, `GPA:${response.education[0].gpa}`);
+        await bot.reply(message, `Institution:${response.education[1].institution}`);
+        await bot.reply(message, `Area:${response.education[1].area}`);
+        await bot.reply(message, `Degree:${response.education[1].studyType}`);
+        await bot.reply(message, `Start date:${response.education[1].startDate}`);
+        await bot.reply(message, `End date:${response.education[1].endDate}`);
     })
     controller.hears(['^work$'], 'message,direct_message', async (bot, message) => {
-        const response = resume.work;
-        await bot.reply(message, JSON.stringify(response));
+        const response = resume;
+        await bot.reply(message, `Work`);
+        await bot.reply(message, `Company:${response.work[0].company}`);
+        await bot.reply(message, `Position:${response.work[0].position}`);
+        await bot.reply(message, `Website:${response.work[0].website}`);
+        await bot.reply(message, `Start:${response.work[0].startDate}`);
+        await bot.reply(message, `End:${response.work[0].endDate}`);
+        await bot.reply(message, `Duties:${response.work[0].highlights.map(el => (el + '\n'))}`);
+        await bot.reply(message, `Company:${response.work[1].company}`);
+        await bot.reply(message, `Position:${response.work[1].position}`);
+        await bot.reply(message, `Website:${response.work[1].website}`);
+        await bot.reply(message, `Start:${response.work[1].startDate}`);
+        await bot.reply(message, `End:${response.work[1].endDate}`);
+        await bot.reply(message, `Duties:${response.work[1].highlights.map(el => (el + '\n'))}`);
+        await bot.reply(message, `Company:${response.work[2].company}`);
+        await bot.reply(message, `Position:${response.work[2].position}`);
+        await bot.reply(message, `Website:${response.work[2].website}`);
+        await bot.reply(message, `Start:${response.work[2].startDate}`);
+        await bot.reply(message, `End:${response.work[2].endDate}`);
+        await bot.reply(message, `Duties:${response.work[2].highlights.map(el => (el + '\n'))}`);
+        await bot.reply(message, `Company:${response.work[3].company}`);
+        await bot.reply(message, `Position:${response.work[3].position}`);
+        await bot.reply(message, `Website:${response.work[3].website}`);
+        await bot.reply(message, `Start:${response.work[3].startDate}`);
+        await bot.reply(message, `End:${response.work[3].endDate}`);
+        await bot.reply(message, `Duties:${response.work[3].highlights.map(el => (el + '\n'))}`);
     })
     controller.hears(['^skills$'], 'message,direct_message', async (bot, message) => {
-        const response = resume.skills;
-        await bot.reply(message, JSON.stringify(response));
+        const response = resume;
+        await bot.reply(message, `Skills`)
+        await bot.reply(message, `Name: ${response.skills[0].name}`)
+        await bot.reply(message, `Name: ${response.skills[0].keywords.map(el => (el + '\n'))}`)
     })
     controller.hears(['^languages$'], 'message,direct_message', async (bot, message) => {
-        const response = resume.languages;
-        await bot.reply(message, JSON.stringify(response));
+        
+        await bot.reply(message, 'Ethan is a native English speaker, and has professional fluency in Spanish as well.');
     })
     controller.hears(['^interests$'], 'message,direct_message', async (bot, message) => {
-        const response = resume.interests;
-        await bot.reply(message, JSON.stringify(response));
+        
+        await bot.reply(message, "Ethan's interests include archery, surfing, swimming, bouldering, Krav Maga, reading, and writing stories." );
     })
 
     
