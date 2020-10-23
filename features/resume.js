@@ -226,31 +226,26 @@ module.exports = function (controller) {
         await bot.reply(message, `Website:${response.work[0].website}`);
         await bot.reply(message, `Start:${response.work[0].startDate}`);
         await bot.reply(message, `End:${response.work[0].endDate}`);
-        await bot.reply(message, `Duties:${response.work[0].highlights.map(el => (el))}`);
+        await bot.reply(message, `Duties:${response.work[0].highlights.map(el => (el + '\n'))}`);
         await bot.reply(message, `Company:${response.work[1].company}`);
         await bot.reply(message, `Position:${response.work[1].position}`);
         await bot.reply(message, `Website:${response.work[1].website}`);
         await bot.reply(message, `Start:${response.work[1].startDate}`);
         await bot.reply(message, `End:${response.work[1].endDate}`);
-        await bot.reply(message, `Duties:${response.work[1].highlights.map(el => (el))}`);
+        await bot.reply(message, `Duties:${response.work[1].highlights.map(el => (el + '\n'))}`);
         await bot.reply(message, `Company:${response.work[2].company}`);
         await bot.reply(message, `Position:${response.work[2].position}`);
         await bot.reply(message, `Website:${response.work[2].website}`);
         await bot.reply(message, `Start:${response.work[2].startDate}`);
         await bot.reply(message, `End:${response.work[2].endDate}`);
-        await bot.reply(message, `Duties:${response.work[2].highlights.map(el => (el))}`);
+        await bot.reply(message, `Duties:${response.work[2].highlights.map(el => (el + '\n'))}`);
         await bot.reply(message, `Company:${response.work[3].company}`);
         await bot.reply(message, `Position:${response.work[3].position}`);
         await bot.reply(message, `Website:${response.work[3].website}`);
         await bot.reply(message, `Start:${response.work[3].startDate}`);
         await bot.reply(message, `End:${response.work[3].endDate}`);
-        await bot.reply(message, `Duties:${response.work[3].highlights.map(el => (el))}`);
-        await bot.reply(message, `Company:${response.work[4].company}`);
-        await bot.reply(message, `Position:${response.work[4].position}`);
-        await bot.reply(message, `Website:${response.work[4].website}`);
-        await bot.reply(message, `Start:${response.work[4].startDate}`);
-        await bot.reply(message, `End:${response.work[4].endDate}`);
-        await bot.reply(message, `Duties:${response.work[4].highlights.map(el => (el))}`);
+        await bot.reply(message, `Duties:${response.work[3].highlights.map(el => (el + '\n'))}`);
+        
 
         await bot.reply(message, `Education`);
         await bot.reply(message, `Institution:${response.education[0].institution}`);
@@ -266,10 +261,14 @@ module.exports = function (controller) {
         await bot.reply(message, `End date:${response.education[1].endDate}`);
         
         await bot.reply(message, 'Awards');
-        await bot.reply(message, `Title: ${response.wards[0].title}`);
-        await bot.reply(message, `Date: ${response.wards[0].date}`);
-        await bot.reply(message, `Awarder: ${response.wards[0].title}`);
-        await bot.reply(message, `Summary ${response.wards[0].summary}`);
+        await bot.reply(message, `Title: ${response.awards[0].title}`);
+        await bot.reply(message, `Date: ${response.awards[0].date}`);
+        await bot.reply(message, `Awarder: ${response.awards[0].title}`);
+        await bot.reply(message, `Summary ${response.awards[0].summary}`);
+
+        await bot.reply(message, `Skills`)
+        await bot.reply(message, `Name: ${response.skills[0].name}`)
+        await bot.reply(message, `Name: ${response.skills[0].keywords.map(el => (el + '\n'))}`)
 
         // await bot.reply(message, JSON.stringify(response.basics));
         // await bot.reply(message, JSON.stringify(response.education));
