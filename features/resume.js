@@ -296,6 +296,12 @@ module.exports = function (controller) {
     controller.hears('github', 'message,direct_message', async(bot, message) => {
         await bot.reply(message, "https://github.com/wrightet")
     })
+    controller.hears('portfolio', 'message,direct_message', async(bot, message) => {
+        await bot.reply(message, "https://wrightet.github.io/ethan-wright/")
+    })
+    controller.hears('linkedin', 'message,direct_message', async(bot, message) => {
+        await bot.reply(message, "https://www.linkedin.com/in/ethan-wright-91a75270/")
+    })
     controller.hears(['^what is your favorite food$'], 'message,direct_message', async(bot, message) => {
         await bot.reply(message, "Ethan's favorite food is chocolate chip cookies.")
     })
