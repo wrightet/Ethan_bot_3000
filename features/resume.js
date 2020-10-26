@@ -293,9 +293,13 @@ module.exports = function (controller) {
     controller.hears(['^favorite food$'], 'message,direct_message', async(bot, message) => {
         await bot.reply(message, "Ethan's favorite food is chocolate chip cookies.")
     })
+    controller.hears('github', 'message,direct_message', async(bot, message) => {
+        await bot.reply(message, "https://github.com/wrightet")
+    })
     controller.hears(['^what is your favorite food$'], 'message,direct_message', async(bot, message) => {
         await bot.reply(message, "Ethan's favorite food is chocolate chip cookies.")
     })
+
     controller.hears('education', 'message,direct_message', async (bot, message) => {
         const response = resume;
         await bot.reply(message, `Education`);
