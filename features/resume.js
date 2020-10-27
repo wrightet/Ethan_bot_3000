@@ -282,7 +282,7 @@ module.exports = function (controller) {
         await bot.reply(message, 'Bye! Thanks for chatting!')
     })
     controller.hears(['^Hello$'], 'message,direct_message', async (bot, message) => {
-        await bot.reply(message, "Hello! My name is Ethan Bot 3000 and I am Ethan Wright's personal chat bot. Let me know what you would like to know about him and I will do my best to answer. Currently you can ask me, favorite color, favorite food, education, interests, awards, work, skills, languages, and resume.")
+        await bot.reply(message, "Hello! My name is Ethan Bot 3000 and I am Ethan Wright's personal chat bot. Let me know what you would like to know about him and I will do my best to answer. Currently you can ask me, favorite color, favorite food, education, interests, awards, work, skills, languages, resume, github, portfolio, and linkedin.")
     })
     controller.hears(['^what is your favorite color$'], 'message,direct_message', async(bot, message) => {
         await bot.reply(message, "Ethan's favorite color is blue.")
